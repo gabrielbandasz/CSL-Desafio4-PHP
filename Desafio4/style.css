@@ -1,0 +1,165 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Corpo da página */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f4f7; /* tom suave de cinza claro, semelhante à imagem */
+  color: #1f2937;
+  padding: 28px 20px;
+}
+
+/* Container central parecido com a imagem (cards empilhados) */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho da página */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: 26px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+.header p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Card genérico (box branco com sombra suave) */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb; /* borda sutil igual à aparência de cartão */
+}
+
+/* Título do exercício dentro do card */
+.card h3 {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 8px;
+}
+
+/* Campos de formulário (inputs) */
+.card form input[type="text"],
+.card form input[type="number"],
+.card form input[type="email"],
+.card form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+}
+.card form input::placeholder {
+  color: #9ca3af;
+}
+.card form input:focus,
+.card form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn:hover { background: #1d4ed8; }
+
+/* Área de resultado */
+.result {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #111827;
+  padding: 6px 8px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Link de voltar */
+a.voltar {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1f4e8f;
+  text-decoration: none;
+}
+a.voltar:hover { text-decoration: underline; }
+
+/* Layout responsivo (empilha em telas menores) */
+@media (max-width: 700px) {
+  .container { padding: 0 6px; }
+}
+
+/* TITULOS DAS SEÇÕES */
+.section-title{
+margin-top:30px;
+margin-bottom:12px;
+font-size:20px;
+color:#0f172a;
+border-left:5px solid #2563eb;
+padding-left:10px;
+}
+
+/* GRID DE EXERCICIOS */
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-bottom:20px;
+}
+
+/* CARD COM HOVER */
+.card{
+background:#b9b8b8;
+border-radius:12px;
+padding:18px;
+box-shadow:0 3px 8px rgba(0,0,0,0.08);
+border:1px solid #e5e7eb;
+text-align:center;
+transition:transform .2s, box-shadow .2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 6px 16px rgba(0,0,0,0.12);
+}
+
+.card h3{
+margin-bottom:12px;
+font-size:18px;
+}
+
+/* RESPONSIVO */
+@media (max-width:800px){
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:500px){
+.grid{
+grid-template-columns:1fr;
+}
+}
